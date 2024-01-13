@@ -7,9 +7,9 @@ public class CrewMember {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-//    @ManyToOne
-//    @JoinColumn(name = "trip_id")
-//    private FishingTrip trip;
+    @ManyToOne
+    @JoinColumn(name = "trip_id")
+    private FishingTrip trip;
     private String name;
     private String post;
     private String address;
@@ -22,13 +22,13 @@ public class CrewMember {
         this.id = id;
     }
 
-//    public FishingTrip getTrip() {
-//        return trip;
-//    }
-//
-//    public void setTrip(FishingTrip trip) {
-//        this.trip = trip;
-//    }
+    public FishingTrip getTrip() {
+        return trip;
+    }
+
+    public void setTrip(FishingTrip trip) {
+        this.trip = trip;
+    }
 
     public String getName() {
         return name;

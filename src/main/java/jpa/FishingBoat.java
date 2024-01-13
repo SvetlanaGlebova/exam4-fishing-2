@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import javax.xml.crypto.Data;
+import java.util.Date;
 
 @Entity
 public class FishingBoat {
@@ -15,7 +16,7 @@ public class FishingBoat {
     private String name;
     private String type;
     private double displacement;
-    private Data buildDate;
+    private Date buildDate;
 
     public long getId() {
         return id;
@@ -49,11 +50,11 @@ public class FishingBoat {
         this.displacement = displacement;
     }
 
-    public Data getBuildDate() {
+    public Date getBuildDate() {
         return buildDate;
     }
 
-    public void setBuildDate(Data buildDate) {
+    public void setBuildDate(Date buildDate) {
         this.buildDate = buildDate;
     }
 }

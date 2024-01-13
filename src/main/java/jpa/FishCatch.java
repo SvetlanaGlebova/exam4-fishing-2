@@ -7,9 +7,9 @@ public class FishCatch {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-//    @ManyToOne
-//    @JoinColumn(name = "trip_id")
-//    private FishingTrip trip;
+    @ManyToOne
+    @JoinColumn(name = "trip_id")
+    private FishingTrip trip;
 
     private String fishType;
     private int quantity;
@@ -23,13 +23,13 @@ public class FishCatch {
         this.id = id;
     }
 
-//    public FishingTrip getTrip() {
-//        return trip;
-//    }
-//
-//    public void setTrip(FishingTrip trip) {
-//        this.trip = trip;
-    //}
+    public FishingTrip getTrip() {
+        return trip;
+    }
+
+    public void setTrip(FishingTrip trip) {
+        this.trip = trip;
+    }
 
     public String getFishType() {
         return fishType;

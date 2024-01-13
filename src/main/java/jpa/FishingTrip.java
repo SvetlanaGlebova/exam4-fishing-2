@@ -9,9 +9,9 @@ public class FishingTrip {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-//    @ManyToOne
-//    @JoinColumn(name = "boat_id")
-//    private FishingBoat boat;
+    @ManyToOne
+    @JoinColumn(name = "boat_id")
+    private FishingBoat boat;
     private Date departureDate;
     private Date returnDate;
 
@@ -23,13 +23,13 @@ public class FishingTrip {
         this.id = id;
     }
 
-//    public FishingBoat getBoat() {
-//        return boat;
-//    }
-//
-//    public void setBoat(FishingBoat boat) {
-//        this.boat = boat;
-//    }
+    public FishingBoat getBoat() {
+        return boat;
+    }
+
+    public void setBoat(FishingBoat boat) {
+        this.boat = boat;
+    }
 
     public Date getDepartureDate() {
         return departureDate;
